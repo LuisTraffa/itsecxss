@@ -11,7 +11,7 @@
 <script>
         
         const div1 = document.getElementById('name1');
-        div1.textContent = fetch("https://t8.itsec.sec.in.tum.de/").then((response) => response.json())
+        div1.textContent = fetch("https://t8.itsec.sec.in.tum.de/").then((response) => response.json()).then((data) => data.text)
                                   
                                         
                                   
