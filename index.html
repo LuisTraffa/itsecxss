@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <script>
-        function writeTextFile(afilename, output)
-        {
-          var txtFile =new File(afilename);
-          txtFile.writeln(output);
-          txtFile.close();
-        }
-        var f = "sometextfile.txt";
-        fetch("https://t8.itsec.sec.in.tum.de/")
-            .then((response) => response.json())
-            .then((data) => writeTextFile(f, data.text)))
-                                  
-                                        
-                                  
-    </script>
+    
     <body>
-        <p>
+        <p id=name1>
             xss
         </p>
     </body>
 </html>
+
+<script>
+        
+        const div1 = document.getElementById('name1');
+        div1.textContent = fetch("https://t8.itsec.sec.in.tum.de/").then((response) => response.json())
+                                  
+                                        
+                                  
+    </script>
